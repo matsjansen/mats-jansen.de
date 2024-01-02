@@ -18,9 +18,11 @@ a , p , div {
     border: white;
     border-width: 0.5px;
     border-style: solid;
-    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
     max-width: 500px;
     min-width: 200px;
+    width: 90%;
     padding: 0%;
     background-color: rgb(60, 60, 60);
     border-radius: 25px;
@@ -28,9 +30,13 @@ a , p , div {
 
 .align {
     display:block;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+  }
 
 .margin1 {
     margin-bottom: 1%;
