@@ -1,7 +1,74 @@
-h1 {
-    height: 25px;
+body {
+    background-color: rgb(29, 29, 29);
+    font-family: 'Roboto', sans-serif;
+    font-size: 150%;
+    margin: 0px;
 }
 
-.example {
-    color: fuchsia;
+a , p , div {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 3%;
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 100%;
 }
+
+.divbox {
+    border: white;
+    border-width: 0.5px;
+    border-style: solid;
+    width: 50%;
+    max-width: 500px;
+    min-width: 200px;
+    padding: 0%;
+    background-color: rgb(60, 60, 60);
+    border-radius: 25px;
+}
+
+.align {
+    display:block;
+    margin:0 auto;
+}
+
+
+.margin1 {
+    margin-bottom: 1%;
+}
+
+
+.align h2{
+    display:block;
+    margin:0 auto;
+}
+
+
+h1 {
+    padding-top: 0.5%;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    width: fit-content;
+    padding: 0.5%;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    
+}
+
+hr {
+    margin-top: 1%;
+    height: 0.25%;
+    background-color: white;
+    padding: 0%;
+}
+
+br {
+    display: block;
+    margin: 0px 0;
+ }
