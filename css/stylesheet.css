@@ -48,6 +48,11 @@ a , p , div {
     margin:0 auto;
 }
 
+.subheader {
+    font-size: large;
+    margin: 0 auto;
+}
+
 
 h1 {
     padding-top: 0.5%;
@@ -77,4 +82,16 @@ hr {
 br {
     display: block;
     margin: 0px 0;
+ }
+
+ button {
+    color: white;
+    font-size: xx-large;
+ }
+
+ .inp {
+    padding-left: 1%;
+    color: white;
+    font-size: x-large;
+    margin-bottom: 1%;
  }

@@ -2,20 +2,24 @@
     <head>
         <meta charset="UTF-8">
         <title>
-            Mats Jansen
+            Noten - Mats Jansen
         </title>
         <link rel="stylesheet" href="../css/stylesheet.css">
+        <script src="../js/grade.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     </head>
     <body>
         <h1 class="example">
-            Mats Jansen
+            Noten
+            <p class="subheader">Mats Jansen</p>
             <hr>
         </h1>
-        
-        
-
+        <div id="content" class="align">
+            <input class="divbox align inp" type="number" id="lk" maxlength="2" placeholder="Anzahl der Lks">
+            <input class="divbox align inp" type="number" id="gk" maxlength="2" placeholder="Anzahl der GKs">
+            <button class="divbox align" onclick="gradeInput()">Fertig</button>
+        </div>
     </body>
 </html>
