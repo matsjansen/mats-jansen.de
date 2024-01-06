@@ -53,6 +53,12 @@ a , p , div {
     margin: 0 auto;
 }
 
+.explainer {
+    font-size: x-large;
+    margin: 0%;
+    margin-bottom: 1%;
+}
+
 
 h1 {
     padding-top: 0.5%;
@@ -95,3 +101,9 @@ br {
     font-size: x-large;
     margin-bottom: 1%;
  }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
