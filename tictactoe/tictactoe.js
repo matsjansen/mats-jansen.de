@@ -2,15 +2,15 @@ var circle = "<svg width='1/3' height='1/3' xmlns='http://www.w3.org/2000/svg'><
 var cross = "<svg width='1/3' height='1/3' xmlns='http://www.w3.org/2000/svg'><line x1='10%' y1='10%' x2='90%' y2='90%' stroke='white' stroke-width='10%'/><line x1='90%' y1='10%' x2='10%' y2='90%' stroke='white' stroke-width='10%'/></svg>"
 var Content;
 var counter = 0;
-var r1c1;
-var r1c2;
-var r1c3;
-var r2c1;
-var r2c2;
-var r2c3;
-var r3c1;
-var r3c2;
-var r3c3;
+var r1c1 = null;
+var r1c2 = null;
+var r1c3 = null;
+var r2c1 = null;
+var r2c2 = null;
+var r2c3 = null;
+var r3c1 = null;
+var r3c2 = null;
+var r3c3 = null;
 
 
 
@@ -39,7 +39,7 @@ function changer(id){
     var result = checker();
     if (result != null){
         if (result == "circle"){
-            Content.innerHTML = "<p class='explainer'>Kreis siegt!</p>"
+            Content.innerHTML = "<p class='tall'>Kreis siegt!</p>"
         }
         else {
             Content.innerHTML = "<p class='tall'>Kreuz siegt!</p>"
@@ -48,8 +48,50 @@ function changer(id){
         Content.classList.remove("tablebox");
         Content.innerHTML += "<button class='divbox align margin3' onclick='location.reload()'>Nochmal</button>"
     }
+    else if (full()){
+        Content.innerHTML = "<p class='tall'>Unentschieden!</p>"
+        Content.classList.add("divbox");
+        Content.classList.remove("tablebox");
+        Content.innerHTML += "<button class='divbox align margin3' onclick='location.reload()'>Nochmal</button>"
+
+    }
 
 
+}
+
+function full(){
+    var count = 0;
+        if (r1c1 != null){
+            count++;
+        }
+        if (r1c2 != null){
+            count++;
+        }
+        if (r1c3 != null){
+            count++;
+        }
+        if (r2c1 != null){
+            count++;
+        }
+        if (r2c2 != null){
+            count++;
+        }
+        if (r2c3 != null){
+            count++;
+        }
+        if (r3c1 != null){
+            count++;
+        }
+        if (r3c2 != null){
+            count++;
+        }
+        if (r3c3 != null){
+            count++;
+        }
+    if (count >= 9){
+        return true;
+    }
+    return false;
 }
 
 function switcher(id, value) {
@@ -103,7 +145,7 @@ function checker() {
             return control;
         }
         // lower row
-        else if (r2c1 == control && r2c2 == control && r2c3 == control){
+        else if (r3c1 == control && r3c2 == control && r3c3 == control){
             return control;
         }
         // left column
