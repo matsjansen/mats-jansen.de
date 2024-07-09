@@ -17,11 +17,31 @@
             <hr>
         </h1>
 
-        <div id="content" class="align">
-            <p class='explainer'>Wer beginnt?</p>
+        <div id="start" class="align">
+            <p class='explainer' style="font-size: 170%;">Wer beginnt?</p>
             <button class="divbox align margin1" onclick="starter('kreuz')">Kreuz</button>
             <button class="divbox align" onclick="starter('kreis')">Kreis</button>
+        </div> 
+
+        <div id="content" class="align, grid-container">
+            <div class="grid-item" id="r1c1"><button class='buttonbox align' onclick='changer("r1c1")'></button></div>
+            <div class="grid-item" id="r1c2"><button class='buttonbox align' onclick='changer("r1c2")'></button></div>
+            <div class="grid-item" id="r1c3"><button class='buttonbox align' onclick='changer("r1c3")'></button></div>  
+            <div class="grid-item" id="r2c1"><button class='buttonbox align' onclick='changer("r2c1")'></button></div>
+            <div class="grid-item" id="r2c2"><button class='buttonbox align' onclick='changer("r2c2")'></button></div>
+            <div class="grid-item" id="r2c3"><button class='buttonbox align' onclick='changer("r2c3")'></button></div>  
+            <div class="grid-item" id="r3c1"><button class='buttonbox align' onclick='changer("r3c1")'></button></div>
+            <div class="grid-item" id="r3c2"><button class='buttonbox align' onclick='changer("r3c2")'></button></div>
+            <div class="grid-item" id="r3c3"><button class='buttonbox align' onclick='changer("r3c3")'></button></div> 
         </div>
+
+        <div id="end" class="align" style="display: none;">
+            <p id="crossend" class='explainer' style="font-size: 170%; display: none;">Kreuz gewinnt!</p>
+            <p id="circleend" class='explainer' style="font-size: 170%; display: none;">Kreis gewinnt!</p>
+            <p id="tieend" class='explainer' style="font-size: 170%; display: none;">Unentschieden!</p>
+            <button class="divbox align margin1" onclick='location.reload()'>Nochmal</button>
+        </div> 
         
     </body>
 </html>
+

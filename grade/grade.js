@@ -38,6 +38,7 @@ function calculate(){
         }
     }
     var result = (Math.round(100*(combined/allCourses)))/100;
+    var normalnote = (Math.round(100*((17-result)/3)))/100;
 
 
     Content.innerHTML = ("<div id='something' class='align'>");
@@ -52,6 +53,6 @@ function calculate(){
     }
     Content.innerHTML += "<button class='divbox align' onclick='calculate()'>Fertig</button>";
     Content.innerHTML += "</div>";
-    Content.innerHTML += "<br><div class='divbox align margin1'><h2 class='align'>Aktueller Schnitt</h2><hr class='align'><p>" +result+ " Punkte</p></div>";
+    Content.innerHTML += "<br><div class='divbox align margin1'><h2 class='align'>Aktueller Schnitt</h2><hr class='align'><p>" +result+ " Punkte</p><hr class='align'><p>Note " +normalnote+ "</p></div>";
 
 }

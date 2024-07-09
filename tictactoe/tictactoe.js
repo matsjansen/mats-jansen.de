@@ -15,12 +15,14 @@ var r3c3 = null;
 
 
 function starter(inp){
+    document.getElementById("start").style.display = "none";
     Content = document.getElementById('content');
     if (inp == "kreuz"){
         counter++;
     }
-    Content.classList.add("tablebox");
-    Content.innerHTML = ("<table><tr id='r1'><th id='r1c1'><button class='buttonbox align' onclick='changer(&apos;r1c1&apos;)'></button></th><th id='r1c2' class='border'><button class='buttonbox align' onclick='changer(&apos;r1c2&apos;)'></button></th><th id='r1c3'><button class='buttonbox align' onclick='changer(&apos;r1c3&apos;)'></button></th></tr><tr id='r2'><th id='r2c1' class='border'><button class='buttonbox align' onclick='changer(&apos;r2c1&apos;)'></button></th><th id='r2c2'><button class='buttonbox align' onclick='changer(&apos;r2c2&apos;)'></button></th><th id='r2c3' class='border'><button class='buttonbox align' onclick='changer(&apos;r2c3&apos;)'></button></th></tr><tr id='r3'><th id='r3c1'><button class='buttonbox align' onclick='changer(&apos;r3c1&apos;)'></button></th><th id='r3c2' class='border'><button class='buttonbox align' onclick='changer(&apos;r3c2&apos;)'></button></th><th id='r3c3'><button class='buttonbox align' onclick='changer(&apos;r3c3&apos;)'></button></th></tr></table>");
+    Content.style.display = "grid";
+    //Content.classList.add("tablebox");
+    //Content.innerHTML = ("<table><tr id='r1'><th id='r1c1'><button class='buttonbox align' onclick='changer(&apos;r1c1&apos;)'></button></th><th id='r1c2' class='border'><button class='buttonbox align' onclick='changer(&apos;r1c2&apos;)'></button></th><th id='r1c3'><button class='buttonbox align' onclick='changer(&apos;r1c3&apos;)'></button></th></tr><tr id='r2'><th id='r2c1' class='border'><button class='buttonbox align' onclick='changer(&apos;r2c1&apos;)'></button></th><th id='r2c2'><button class='buttonbox align' onclick='changer(&apos;r2c2&apos;)'></button></th><th id='r2c3' class='border'><button class='buttonbox align' onclick='changer(&apos;r2c3&apos;)'></button></th></tr><tr id='r3'><th id='r3c1'><button class='buttonbox align' onclick='changer(&apos;r3c1&apos;)'></button></th><th id='r3c2' class='border'><button class='buttonbox align' onclick='changer(&apos;r3c2&apos;)'></button></th><th id='r3c3'><button class='buttonbox align' onclick='changer(&apos;r3c3&apos;)'></button></th></tr></table>");
     
 }
 
@@ -39,20 +41,27 @@ function changer(id){
     var result = checker();
     if (result != null){
         if (result == "circle"){
-            Content.innerHTML = "<p class='tall'>Kreis siegt!</p>"
+            document.getElementById("circleend").style.display = "block";
         }
         else {
-            Content.innerHTML = "<p class='tall'>Kreuz siegt!</p>"
+            document.getElementById("crossend").style.display = "block";
         }
-        Content.classList.add("divbox");
-        Content.classList.remove("tablebox");
-        Content.innerHTML += "<button class='divbox align margin3' onclick='location.reload()'>Nochmal</button>"
+        document.getElementById("end").style.display = "block";
+        Content.style.display = "none";
+
+        //Content.classList.add("divbox");
+        //Content.classList.remove("tablebox");
+        //Content.innerHTML += "<button class='divbox align margin3' onclick='location.reload()'>Nochmal</button>"
     }
     else if (full()){
-        Content.innerHTML = "<p class='tall'>Unentschieden!</p>"
-        Content.classList.add("divbox");
-        Content.classList.remove("tablebox");
-        Content.innerHTML += "<button class='divbox align margin3' onclick='location.reload()'>Nochmal</button>"
+        document.getElementById("tieend").style.display = "block";
+        document.getElementById("end").style.display = "block";
+        Content.style.display = "none";
+
+
+        //Content.classList.add("divbox");
+        //Content.classList.remove("tablebox");
+        //Content.innerHTML += "<button class='divbox align margin3' onclick='location.reload()'>Nochmal</button>"
 
     }
 
